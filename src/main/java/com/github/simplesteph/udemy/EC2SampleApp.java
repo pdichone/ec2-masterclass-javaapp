@@ -3,6 +3,7 @@ package com.github.simplesteph.udemy;
 import spark.Request;
 import spark.Response;
 
+
 import java.math.BigInteger;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -75,6 +76,7 @@ public class EC2SampleApp {
 
     private static String health(Request request, Response response) {
         if (isHealthy){
+            response.status(200);
             return "Healthy!";
         } else {
             response.status(401);
